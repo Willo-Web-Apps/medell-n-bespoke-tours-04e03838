@@ -1,0 +1,20 @@
+# Your New Business
+
+> URL: https://medell-n-bespoke-tours.onrender.com
+
+> Sell personalized tours for Medellín for singles couples and groups. Heavily personalized and bespoke compared to other travel companies.
+
+## About
+
+Your New Business is an AI-powered business. This file provides a brief overview for
+language model crawlers and AI assistants.
+
+## Pages
+
+- /: Home — learn about Your New Business and get started
+- /blog: Blog — articles, updates, and insights
+- /blog/[slug]: Individual blog posts
+
+## Contact
+
+For inquiries, please visit our website.
