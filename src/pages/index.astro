@@ -1,35 +1,511 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="Sell personalized tours for Medellín for singles couples and groups. Heavily personalized and bespoke compared to other travel companies.">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        Sell personalized tours for Medellín for singles couples and groups. Heavily personalized and bespoke compared to other travel companies.
+<Base
+  title="Primavera Journeys — Bespoke Medellín Tours"
+  description="Primavera Journeys designs deeply personal, bespoke tours of Medellín for singles, couples, and groups — crafted around who you are, not a fixed itinerary."
+>
+
+  <!-- =====================================================================
+       HERO — Immersive full-bleed, atmospheric gradient, editorial type
+       ===================================================================== -->
+  <section class="relative min-h-screen flex flex-col justify-end overflow-hidden hero-bg">
+    <!-- Gradient layers are in .hero-bg + ::after (noise) in CSS -->
+
+    <!-- Subtle dot grid -->
+    <div class="absolute inset-0 z-[1]" style="background-image: radial-gradient(circle at 1px 1px, oklch(1 0 0 / 0.04) 1px, transparent 0); background-size: 28px 28px; mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 100%);"></div>
+
+    <!-- Hero content — bottom-aligned for editorial feel -->
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 pb-20 md:pb-28 pt-40">
+      <!-- Eyebrow -->
+      <p class="text-xs font-medium tracking-[0.22em] uppercase text-accent-400 mb-6 animate-fade-in" style="letter-spacing: 0.22em;">
+        Medellín, Colombia · Private & Bespoke
       </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
-        </a>
+
+      <!-- Main headline -->
+      <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-surface-50 leading-[1.05] max-w-4xl animate-slide-up">
+        Your Medellín.<br/>
+        <em class="font-normal italic">Designed Around</em><br/>
+        You, Not the Crowd.
+      </h1>
+
+      <!-- Sub -->
+      <p class="mt-8 text-base md:text-lg text-surface-100/75 max-w-xl leading-relaxed font-body font-light animate-slide-up delay-200">
+        Bespoke tours for singles, couples, and groups — crafted by local experts who know Medellín's every corner, story, and secret.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-wrap items-center gap-4 animate-slide-up delay-300">
+        <a href="#contact" class="btn-primary">Plan My Journey</a>
+        <a href="#why" class="btn-ghost">Discover Our Story</a>
+      </div>
+
+      <!-- Micro-proof -->
+      <p class="mt-6 text-xs text-surface-200/40 font-body animate-fade-in delay-500">
+        Fully tailored · No fixed itineraries · Trusted by travelers from 30+ countries
+      </p>
+    </div>
+
+    <!-- Bottom fade into cream -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 z-[3]" style="background: linear-gradient(to bottom, transparent, oklch(0.985 0.012 85));"></div>
+  </section>
+
+
+  <!-- =====================================================================
+       ORIGIN STORY — Narrative, generous whitespace, editorial
+       ===================================================================== -->
+  <section id="why" class="py-24 md:py-36">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+        <!-- Left: label + decorative line -->
+        <div class="lg:col-span-3 flex flex-col items-start gap-4 animate-slide-up">
+          <span class="text-xs font-medium tracking-[0.22em] uppercase text-accent-500">Our Story</span>
+          <div class="w-12 h-px bg-accent-400"></div>
+          <!-- Floating decorative element -->
+          <div class="mt-6 hidden lg:block animate-float">
+            <svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 5 C20 15 10 35 15 55 C20 75 35 90 40 95 C45 90 60 75 65 55 C70 35 60 15 40 5Z" fill="oklch(0.34 0.082 152 / 0.12)" stroke="oklch(0.34 0.082 152 / 0.30)" stroke-width="1"/>
+              <path d="M40 95 L40 40" stroke="oklch(0.34 0.082 152 / 0.50)" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="40" cy="40" r="3" fill="oklch(0.62 0.120 65 / 0.60)"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right: narrative text -->
+        <div class="lg:col-span-9 animate-slide-up delay-200">
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-light text-surface-950 leading-[1.1] mb-10">
+            Medellín isn't a destination you can see<br/>
+            <em class="italic text-brand-600">from a bus window.</em>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-base md:text-lg text-surface-800/80 font-body font-light leading-relaxed">
+            <p>
+              We've watched thousands of travelers spend a week in Medellín and leave knowing its Instagram highlights — but not its soul. The neighborhood that transformed from a symbol of crisis to a model of resilience. The coffee shop hidden inside a converted library. The viewpoint that only locals know at dusk.
+            </p>
+            <p>
+              Primavera Journeys was built to change that. We design every tour from scratch around the person in front of us — your pace, your passions, your idea of a perfect day. Whether you're here alone to find something new, with a partner to fall in love with a city, or with friends chasing a celebration you'll never forget.
+            </p>
+          </div>
+
+          <div class="mt-10 inline-flex items-center gap-3 text-sm font-medium text-brand-600 hover:text-brand-500 transition-colors cursor-pointer">
+            <span>Meet your guides</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+
+  <!-- =====================================================================
+       PULL QUOTE — Magazine-style editorial moment
+       ===================================================================== -->
+  <section class="py-20 md:py-28" style="background-color: oklch(0.965 0.016 85);">
+    <!-- Top wave -->
+    <div class="overflow-hidden leading-[0] -mt-20 md:-mt-28 mb-20 md:mb-28">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-12 block" style="background: oklch(0.985 0.012 85);">
+        <path d="M0,20 C480,60 960,0 1440,20 L1440,60 L0,60 Z" fill="oklch(0.965 0.016 85)"/>
+      </svg>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="none" class="mx-auto mb-8 text-accent-400" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 24V14.4C0 6.4 4.8 1.6 14.4 0L16 2.4C11.2 3.2 8.267 5.867 7.2 10.4H13.6V24H0ZM18.4 24V14.4C18.4 6.4 23.2 1.6 32.8 0L34.4 2.4C29.6 3.2 26.667 5.867 25.6 10.4H32V24H18.4Z" fill="currentColor" fill-opacity="0.6"/>
+      </svg>
+      <blockquote class="pull-quote text-3xl md:text-4xl lg:text-5xl text-surface-950 leading-[1.25]">
+        "We didn't feel like tourists. We felt like locals who happened to arrive that weekend — because our guide knew which café opened early, which street art had a story, and where the best <em>bandeja paisa</em> in the city was hiding."
+      </blockquote>
+      <cite class="mt-8 block text-xs font-medium tracking-[0.18em] uppercase text-surface-800/50 not-italic">
+        — Sarah & Marcus, New York · Couples Tour, 2024
+      </cite>
+    </div>
+
+    <!-- Bottom wave -->
+    <div class="overflow-hidden leading-[0] mt-20 md:mt-28 -mb-20 md:-mb-28">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-12 block" style="background: oklch(0.965 0.016 85);">
+        <path d="M0,40 C480,0 960,60 1440,40 L1440,0 L0,0 Z" fill="oklch(0.985 0.012 85)"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- =====================================================================
+       EXPERIENCES — Three traveler archetypes
+       ===================================================================== -->
+  <section id="experiences" class="py-28 md:py-40">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+
+      <!-- Section header -->
+      <div class="max-w-2xl mb-16 md:mb-20 animate-slide-up">
+        <span class="text-xs font-medium tracking-[0.22em] uppercase text-accent-500 mb-4 block">Experiences</span>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-surface-950 leading-[1.1]">
+          Every journey begins with<br/>
+          <em class="italic text-brand-600">a conversation about you.</em>
+        </h2>
+      </div>
+
+      <!-- Three archetype cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- Solo -->
+        <div class="card-organic rounded-sm overflow-hidden animate-slide-up delay-100" style="background-color: oklch(0.34 0.082 152); color: oklch(0.985 0.012 85);">
+          <div class="p-8 lg:p-10 flex flex-col h-full min-h-[480px]">
+            <!-- Icon -->
+            <div class="mb-8">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="text-accent-300">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
+            </div>
+            <!-- Label -->
+            <span class="text-xs font-medium tracking-[0.2em] uppercase text-accent-300 mb-3">Solo Travel</span>
+            <!-- Heading -->
+            <h3 class="font-display text-3xl md:text-4xl font-light italic leading-[1.15] mb-6 text-surface-50">
+              Safe. Immersive. Completely yours.
+            </h3>
+            <!-- Body -->
+            <p class="text-sm md:text-base font-body font-light leading-relaxed text-surface-100/80 flex-1">
+              Solo in Medellín doesn't mean alone — it means free. We handle the logistics so you can focus on genuine discovery: neighborhoods with soul, conversations with makers, moments that don't happen on group tours. We've guided solo travelers from Toronto to Copenhagen and know exactly how to make a city feel safe and electric at the same time.
+            </p>
+            <!-- CTA -->
+            <a href="#contact" class="mt-8 inline-flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase text-accent-300 hover:text-accent-400 transition-colors">
+              <span>Design my solo trip</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Couples — offset top for visual rhythm -->
+        <div class="card-organic rounded-sm overflow-hidden md:mt-10 animate-slide-up delay-200" style="background-color: oklch(0.985 0.012 85); border: 1px solid oklch(0.34 0.082 152 / 0.12);">
+          <div class="p-8 lg:p-10 flex flex-col h-full min-h-[480px]">
+            <div class="mb-8">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" style="color: oklch(0.62 0.120 65);">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-medium tracking-[0.2em] uppercase mb-3" style="color: oklch(0.62 0.120 65);">Couples</span>
+            <h3 class="font-display text-3xl md:text-4xl font-light italic leading-[1.15] mb-6 text-surface-950">
+              Romance woven into every moment.
+            </h3>
+            <p class="text-sm md:text-base font-body font-light leading-relaxed text-surface-800/75 flex-1">
+              From morning coffee at a hilltop finca to a candlelit dinner in El Poblado's garden district — we design couples experiences that feel discovered, not choreographed. Medellín's warmth, its flower markets, its golden-hour rooftops: all curated to the two of you.
+            </p>
+            <a href="#contact" class="mt-8 inline-flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors" style="color: oklch(0.62 0.120 65);">
+              <span>Plan our couple's journey</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Groups — offset bottom for visual rhythm -->
+        <div class="card-organic rounded-sm overflow-hidden md:mt-20 animate-slide-up delay-300" style="background-color: oklch(0.22 0.055 152); color: oklch(0.985 0.012 85);">
+          <div class="p-8 lg:p-10 flex flex-col h-full min-h-[480px]">
+            <div class="mb-8">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="text-accent-300">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span class="text-xs font-medium tracking-[0.2em] uppercase text-accent-300 mb-3">Groups</span>
+            <h3 class="font-display text-3xl md:text-4xl font-light italic leading-[1.15] mb-6 text-surface-50">
+              Effortless logistics. Unforgettable stories.
+            </h3>
+            <p class="text-sm md:text-base font-body font-light leading-relaxed text-surface-100/80 flex-1">
+              Birthday weekends, corporate retreats, friend reunions — groups are our specialty. We coordinate every detail so the organizer can actually enjoy themselves. From private fleet transport to exclusive venue access, your group gets Medellín's best without the chaos.
+            </p>
+            <a href="#contact" class="mt-8 inline-flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase text-accent-300 hover:text-accent-400 transition-colors">
+              <span>Organize our group</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+
+  <!-- =====================================================================
+       VALUES / PRINCIPLES — Organic, icon-driven
+       ===================================================================== -->
+  <section class="py-24 md:py-32" style="background-color: oklch(0.965 0.016 85);">
+    <!-- Top wave -->
+    <div class="overflow-hidden leading-[0] -mt-24 md:-mt-32 mb-24 md:mb-32">
+      <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-14 block" style="background: oklch(0.985 0.012 85);">
+        <path d="M0,50 C240,20 480,70 720,45 C960,20 1200,60 1440,30 L1440,70 L0,70 Z" fill="oklch(0.965 0.016 85)"/>
+      </svg>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="max-w-xl mb-16 animate-slide-up">
+        <span class="text-xs font-medium tracking-[0.22em] uppercase text-accent-500 mb-4 block">What We Believe</span>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-surface-950 leading-[1.1]">
+          Travel should feel like<br/><em class="italic text-brand-600">a gift, not a product.</em>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Principle 1 -->
+        <div class="animate-slide-up delay-100">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background-color: oklch(0.34 0.082 152 / 0.10);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="oklch(0.34 0.082 152)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h4 class="font-display text-xl font-medium text-surface-950 mb-3">Trust is earned first</h4>
+          <p class="text-sm font-body font-light text-surface-800/70 leading-relaxed">Every traveler receives a detailed personal consultation before any plan is drawn up. We listen before we suggest.</p>
+        </div>
+
+        <!-- Principle 2 -->
+        <div class="animate-slide-up delay-200">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background-color: oklch(0.62 0.120 65 / 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="oklch(0.52 0.110 65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+          </div>
+          <h4 class="font-display text-xl font-medium text-surface-950 mb-3">Your pace, always</h4>
+          <p class="text-sm font-body font-light text-surface-800/70 leading-relaxed">No 6am bus departures. No forced stops at tourist shops. We build around the rhythm that makes you happiest on a trip.</p>
+        </div>
+
+        <!-- Principle 3 -->
+        <div class="animate-slide-up delay-300">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background-color: oklch(0.34 0.082 152 / 0.10);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="oklch(0.34 0.082 152)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h4 class="font-display text-xl font-medium text-surface-950 mb-3">Deep local roots</h4>
+          <p class="text-sm font-body font-light text-surface-800/70 leading-relaxed">Our guides were born and raised here. They know the barrio stories, the corner cafés, the doors that open for people who know the right names.</p>
+        </div>
+
+        <!-- Principle 4 -->
+        <div class="animate-slide-up delay-400">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background-color: oklch(0.62 0.120 65 / 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="oklch(0.52 0.110 65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h4 class="font-display text-xl font-medium text-surface-950 mb-3">International fluency</h4>
+          <p class="text-sm font-body font-light text-surface-800/70 leading-relaxed">We understand exactly what travelers from North America and Europe need to feel comfortable, safe, and genuinely free in a new city.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom wave -->
+    <div class="overflow-hidden leading-[0] mt-24 md:mt-32 -mb-24 md:-mb-32">
+      <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-14 block" style="background: oklch(0.965 0.016 85);">
+        <path d="M0,20 C360,60 720,10 1080,50 C1200,60 1350,30 1440,20 L1440,0 L0,0 Z" fill="oklch(0.985 0.012 85)"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- =====================================================================
+       HOW IT WORKS — 3-step process
+       ===================================================================== -->
+  <section id="how" class="py-28 md:py-40">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+
+      <div class="max-w-xl mb-16 animate-slide-up">
+        <span class="text-xs font-medium tracking-[0.22em] uppercase text-accent-500 mb-4 block">The Process</span>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-surface-950 leading-[1.1]">
+          From first message to<br/><em class="italic text-brand-600">first memory.</em>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+
+        <!-- Step 1 -->
+        <div class="relative animate-slide-up delay-100">
+          <div class="flex items-start gap-6 md:flex-col md:gap-0">
+            <!-- Number + line -->
+            <div class="flex-shrink-0 md:mb-6 flex items-center gap-0">
+              <span class="font-display text-6xl md:text-8xl font-light text-brand-200 leading-none">01</span>
+              <!-- Horizontal connector (md+) -->
+              <div class="hidden md:block absolute top-10 left-[calc(50%+1.5rem)] right-0 h-px bg-surface-200"></div>
+            </div>
+            <div class="md:mt-2">
+              <h4 class="font-display text-2xl font-medium text-surface-950 mb-3 mt-1 md:mt-0">Tell us who you are</h4>
+              <p class="text-sm font-body font-light text-surface-800/70 leading-relaxed max-w-xs">A 20-minute conversation — no forms, no questionnaires. We want to understand your travel personality, what excites you, what drains you, and what you've always wanted from a trip.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative animate-slide-up delay-200 mt-10 md:mt-0 md:pl-10 lg:pl-16">
+          <div class="flex items-start gap-6 md:flex-col md:gap-0">
+            <div class="flex-shrink-0 md:mb-6">
+              <span class="font-display text-6xl md:text-8xl font-light text-brand-200 leading-none">02</span>
+            </div>
+            <div class="md:mt-2">
+              <h4 class="font-display text-2xl font-medium text-surface-950 mb-3 mt-1 md:mt-0">Receive your proposal</h4>
+              <p class="text-sm font-body font-light text-surface-800/70 leading-relaxed max-w-xs">Within 48 hours we send a beautifully detailed day-by-day itinerary — fully editable. Every restaurant, experience, and route is chosen for you specifically, with the reasoning explained.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative animate-slide-up delay-300 mt-10 md:mt-0 md:pl-10 lg:pl-16">
+          <div class="flex items-start gap-6 md:flex-col md:gap-0">
+            <div class="flex-shrink-0 md:mb-6">
+              <span class="font-display text-6xl md:text-8xl font-light text-brand-200 leading-none">03</span>
+            </div>
+            <div class="md:mt-2">
+              <h4 class="font-display text-2xl font-medium text-surface-950 mb-3 mt-1 md:mt-0">Live it, love it</h4>
+              <p class="text-sm font-body font-light text-surface-800/70 leading-relaxed max-w-xs">Your guide meets you at your hotel. Everything is handled. You just show up, stay curious, and leave with stories that don't sound like everyone else's Medellín.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================================
+       SECOND PULL QUOTE (Testimonial variant)
+       ===================================================================== -->
+  <section class="py-20 overflow-hidden" style="background-color: oklch(0.34 0.082 152);">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center relative">
+      <!-- Background decoration -->
+      <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full opacity-10" style="background: radial-gradient(circle, oklch(0.62 0.120 65) 0%, transparent 70%);"></div>
+      <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full opacity-10" style="background: radial-gradient(circle, oklch(0.62 0.120 65) 0%, transparent 70%);"></div>
+
+      <blockquote class="pull-quote text-2xl md:text-3xl lg:text-4xl text-surface-50 leading-[1.35] relative z-10">
+        "I've taken group tours in 12 countries and always felt like a number. With Primavera, I was a person — and Medellín felt like it was mine."
+      </blockquote>
+      <cite class="mt-6 block text-xs font-medium tracking-[0.18em] uppercase text-accent-300 not-italic">
+        — James T., London · Solo Immersion Tour
+      </cite>
+    </div>
+  </section>
+
+
+  <!-- =====================================================================
+       STATS BAR
+       ===================================================================== -->
+  <section class="py-16" style="background-color: oklch(0.22 0.055 152);">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="font-display text-4xl md:text-5xl font-light text-surface-50">500+</div>
+          <div class="text-xs font-medium tracking-[0.15em] uppercase text-accent-300 mt-2">Travelers Hosted</div>
+        </div>
+        <div>
+          <div class="font-display text-4xl md:text-5xl font-light text-surface-50">30+</div>
+          <div class="text-xs font-medium tracking-[0.15em] uppercase text-accent-300 mt-2">Countries Represented</div>
+        </div>
+        <div>
+          <div class="font-display text-4xl md:text-5xl font-light text-surface-50">100%</div>
+          <div class="text-xs font-medium tracking-[0.15em] uppercase text-accent-300 mt-2">Custom Itineraries</div>
+        </div>
+        <div>
+          <div class="font-display text-4xl md:text-5xl font-light text-surface-50">4.97<span class="text-2xl">/5</span></div>
+          <div class="text-xs font-medium tracking-[0.15em] uppercase text-accent-300 mt-2">Average Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================================
+       CONTACT CTA — Mission-driven, warm
+       ===================================================================== -->
+  <section id="contact" class="py-28 md:py-40">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: copy -->
+        <div class="animate-slide-up">
+          <span class="text-xs font-medium tracking-[0.22em] uppercase text-accent-500 mb-4 block">Begin Here</span>
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-light text-surface-950 leading-[1.1] mb-8">
+            Your Medellín is<br/><em class="italic text-brand-600">waiting for you.</em>
+          </h2>
+          <p class="text-base md:text-lg font-body font-light text-surface-800/75 leading-relaxed mb-8 max-w-md">
+            Tell us a little about yourself and what you're dreaming of. We'll be in touch within 24 hours to start designing your journey from the ground up.
+          </p>
+          <div class="flex flex-wrap gap-6 text-sm font-body font-light text-surface-800/60">
+            <span class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.120 65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              No fixed itineraries
+            </span>
+            <span class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.120 65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Free consultation
+            </span>
+            <span class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.120 65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Response within 24hrs
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: contact form -->
+        <div class="animate-slide-up delay-200">
+          <form class="space-y-5" action="mailto:hello@primaverajourneys.co" method="GET" enctype="text/plain">
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-xs font-medium tracking-[0.12em] uppercase text-surface-800/60 mb-2">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required
+                  class="w-full px-4 py-3 text-sm font-body bg-surface-50 border border-surface-200 text-surface-950 placeholder:text-surface-800/30 focus:outline-none focus:border-brand-500 transition-colors rounded-none"
+                  style="border-radius: 2px; background-color: oklch(0.985 0.012 85);">
+              </div>
+              <div>
+                <label for="email" class="block text-xs font-medium tracking-[0.12em] uppercase text-surface-800/60 mb-2">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required
+                  class="w-full px-4 py-3 text-sm font-body border border-surface-200 text-surface-950 placeholder:text-surface-800/30 focus:outline-none focus:border-brand-500 transition-colors"
+                  style="border-radius: 2px; background-color: oklch(0.985 0.012 85);">
+              </div>
+            </div>
+
+            <div>
+              <label for="type" class="block text-xs font-medium tracking-[0.12em] uppercase text-surface-800/60 mb-2">I'm traveling</label>
+              <select id="type" name="type"
+                class="w-full px-4 py-3 text-sm font-body border border-surface-200 text-surface-950 focus:outline-none focus:border-brand-500 transition-colors appearance-none"
+                style="border-radius: 2px; background-color: oklch(0.985 0.012 85);">
+                <option value="">Select one…</option>
+                <option value="solo">Solo</option>
+                <option value="couple">As a couple</option>
+                <option value="group">With a group</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="dates" class="block text-xs font-medium tracking-[0.12em] uppercase text-surface-800/60 mb-2">Approximate travel dates</label>
+              <input type="text" id="dates" name="dates" placeholder="e.g. March 2025, flexible"
+                class="w-full px-4 py-3 text-sm font-body border border-surface-200 text-surface-950 placeholder:text-surface-800/30 focus:outline-none focus:border-brand-500 transition-colors"
+                style="border-radius: 2px; background-color: oklch(0.985 0.012 85);">
+            </div>
+
+            <div>
+              <label for="dream" class="block text-xs font-medium tracking-[0.12em] uppercase text-surface-800/60 mb-2">What does your ideal trip feel like?</label>
+              <textarea id="dream" name="dream" rows="4" placeholder="Tell us what matters most to you — pace, interests, what you're hoping to feel or discover…"
+                class="w-full px-4 py-3 text-sm font-body border border-surface-200 text-surface-950 placeholder:text-surface-800/30 focus:outline-none focus:border-brand-500 transition-colors resize-none"
+                style="border-radius: 2px; background-color: oklch(0.985 0.012 85);"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full text-center">
+              Start My Journey →
+            </button>
+            <p class="text-xs text-surface-800/40 text-center font-body">
+              Free consultation · No commitment required · 24hr response guaranteed
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </Base>
